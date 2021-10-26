@@ -1,0 +1,56 @@
+package assignment__1;
+
+public class Tv
+{
+    private static int channel;
+    private static int volumLevel;
+    private boolean on=false;
+        public Tv()
+    {
+        channel=1;
+        volumLevel=1;
+    }
+    public void Trunon()
+    {
+        on=true;
+    }
+    public void trunoff()
+    {
+        on=false;
+    }
+    public void Setchannel(int newChannel)
+    {
+        if(newChannel<=120)
+                channel=newChannel;
+        else
+            System.out.println(" Not channel... ");
+    }
+    public void SetVolume(int newVolumeLevel)
+    {
+        if(newVolumeLevel<=7)
+                volumLevel=newVolumeLevel;
+        else
+                volumLevel=7;
+    }
+    public static void Channelup()
+    {
+        channel++;
+        if(channel>120)
+            channel=1;
+    }
+    public static void Channeldown()
+    {
+        channel--;
+         if(channel<1)
+            channel=120;
+
+    }
+    public static void Volumeup()
+    {
+        volumLevel++;
+    }
+     public static void Volumedown()
+    {
+        volumLevel--;
+    }
+}
